@@ -7,7 +7,7 @@ export function Footer() {
       {/* Ambient background glow */}
       <div 
         className="absolute bottom-0 right-0 w-[400px] h-[400px] pointer-events-none filter blur-3xl"
-        style={{ background: "radial-gradient(circle, rgba(30, 64, 175, 0.04) 0%, rgba(0,0,0,0) 70%)" }}
+        style={{ background: "radial-gradient(circle, rgba(13, 148, 136, 0.04) 0%, rgba(0,0,0,0) 70%)" }}
       />
       <div 
         className="absolute top-0 left-10 w-[300px] h-[300px] pointer-events-none filter blur-3xl"
@@ -132,7 +132,7 @@ export function Footer() {
                 />
                 <button
                   type="submit"
-                  className="w-10 h-10 rounded-lg bg-gradient-to-r from-secondary to-amber-400 flex items-center justify-center text-white hover:scale-105 transition-all duration-300"
+                  className="w-10 h-10 rounded-lg bg-gradient-to-r from-[#064e3b] via-[#0d9488] to-[#34d399] flex items-center justify-center text-white hover:scale-105 transition-all duration-300"
                   aria-label="Subscribe"
                 >
                   <Send className="h-4 w-4 text-slate-950" />

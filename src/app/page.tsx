@@ -35,7 +35,7 @@ export default function Home() {
           100% { background-position: 0% 50%; }
         }
         .bg-shifting-mesh {
-          background: linear-gradient(-45deg, rgba(250, 249, 245, 1), rgba(30, 58, 138, 0.03), rgba(13, 148, 136, 0.02), rgba(197, 168, 128, 0.04), rgba(250, 249, 245, 1));
+          background: linear-gradient(-45deg, rgba(244, 246, 244, 1), rgba(6, 78, 59, 0.03), rgba(13, 148, 136, 0.02), rgba(52, 211, 153, 0.04), rgba(244, 246, 244, 1));
           background-size: 400% 400%;
           animation: gradient-shift 18s ease infinite;
         }
@@ -63,7 +63,7 @@ export default function Home() {
 
           {/* Subtext */}
           <FadeIn delay={0.4} className="max-w-2xl">
-            <p className="text-base sm:text-lg md:text-xl text-slate-550 mb-12 leading-relaxed font-light">
+            <p className="text-base sm:text-lg md:text-xl text-slate-555 mb-12 leading-relaxed font-light font-sans">
               Professional, result-oriented, and ethical legal representation at the highest level. Navigating corporate law, company registration, foreign investments, and civil litigation in Nepal.
             </p>
           </FadeIn>
@@ -73,7 +73,7 @@ export default function Home() {
             <Magnetic>
               <Link 
                 href="/contact" 
-                className="inline-flex h-12 items-center justify-center rounded-full bg-gradient-to-r from-blue-700 via-teal-600 to-amber-500 px-8 text-sm font-semibold text-white shadow-lg shadow-secondary/10 hover:shadow-secondary/20 hover:scale-103 transition-all duration-300 cursor-pointer"
+                className="inline-flex h-12 items-center justify-center rounded-full bg-gradient-to-r from-[#064e3b] via-[#0d9488] to-[#34d399] px-8 text-sm font-semibold text-white shadow-lg shadow-secondary/10 hover:shadow-secondary/20 hover:scale-103 transition-all duration-300 cursor-pointer"
               >
                 Book Confidential Consultation
               </Link>
@@ -89,7 +89,7 @@ export default function Home() {
           </FadeIn>
 
           {/* Scroll Down Indicator */}
-          <FadeIn delay={0.7} className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden lg:flex flex-col items-center gap-2 text-xs text-slate-400">
+          <FadeIn delay={0.7} className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden lg:flex flex-col items-center gap-2 text-xs text-slate-455">
             <span>Scroll to explore</span>
             <motion.div 
               animate={{ y: [0, 8, 0] }}
@@ -155,14 +155,14 @@ export default function Home() {
                     </div>
                     <Link 
                       href="/practice-areas/corporate-law" 
-                      className="inline-flex items-center text-sm font-semibold text-secondary hover:text-teal-600 transition-colors group/link pt-4"
+                      className="inline-flex items-center text-sm font-semibold text-secondary hover:text-teal-650 transition-colors group/link pt-4"
                     >
                       Detailed services <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover/link:translate-x-1.5" />
                     </Link>
                   </div>
                   <div className="md:col-span-5 bg-slate-50/50 border border-slate-200/60 p-6 rounded-2xl space-y-4">
                     <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">Core Focus Areas</h4>
-                    <ul className="space-y-2.5 text-sm text-slate-650">
+                    <ul className="space-y-2.5 text-sm text-slate-650 font-light">
                       <li className="flex items-center gap-2">
                         <CheckCircle2 className="h-4.5 w-4.5 text-secondary shrink-0" />
                         <span>M&A Transactions</span>
@@ -199,7 +199,7 @@ export default function Home() {
                 </div>
                 <Link 
                   href="/practice-areas/company-registration" 
-                  className="inline-flex items-center text-sm font-semibold text-secondary hover:text-teal-600 transition-colors group/link mt-auto"
+                  className="inline-flex items-center text-sm font-semibold text-secondary hover:text-teal-650 transition-colors group/link mt-auto"
                 >
                   Detailed services <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover/link:translate-x-1.5" />
                 </Link>
@@ -220,7 +220,7 @@ export default function Home() {
                 </div>
                 <Link 
                   href="/practice-areas/foreign-investment" 
-                  className="inline-flex items-center text-sm font-semibold text-secondary hover:text-teal-600 transition-colors group/link mt-auto"
+                  className="inline-flex items-center text-sm font-semibold text-secondary hover:text-teal-650 transition-colors group/link mt-auto"
                 >
                   Detailed services <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover/link:translate-x-1.5" />
                 </Link>
@@ -241,7 +241,7 @@ export default function Home() {
                 </div>
                 <Link 
                   href="/practice-areas/property-law" 
-                  className="inline-flex items-center text-sm font-semibold text-secondary hover:text-teal-600 transition-colors group/link mt-auto"
+                  className="inline-flex items-center text-sm font-semibold text-secondary hover:text-teal-650 transition-colors group/link mt-auto"
                 >
                   Detailed services <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover/link:translate-x-1.5" />
                 </Link>
@@ -262,7 +262,7 @@ export default function Home() {
                 </div>
                 <Link 
                   href="/practice-areas/family-law" 
-                  className="inline-flex items-center text-sm font-semibold text-secondary hover:text-teal-600 transition-colors group/link mt-auto"
+                  className="inline-flex items-center text-sm font-semibold text-secondary hover:text-teal-650 transition-colors group/link mt-auto"
                 >
                   Detailed services <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover/link:translate-x-1.5" />
                 </Link>
@@ -285,14 +285,14 @@ export default function Home() {
                     </div>
                     <Link 
                       href="/practice-areas/civil-litigation" 
-                      className="inline-flex items-center text-sm font-semibold text-secondary hover:text-teal-600 transition-colors group/link pt-4"
+                      className="inline-flex items-center text-sm font-semibold text-secondary hover:text-teal-650 transition-colors group/link pt-4"
                     >
                       Detailed services <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover/link:translate-x-1.5" />
                     </Link>
                   </div>
                   <div className="md:col-span-5 bg-slate-50/50 border border-slate-200/60 p-6 rounded-2xl space-y-4">
                     <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">Success Indicators</h4>
-                    <ul className="space-y-2.5 text-sm text-slate-650">
+                    <ul className="space-y-2.5 text-sm text-slate-655 font-light">
                       <li className="flex items-center gap-2">
                         <CheckCircle2 className="h-4.5 w-4.5 text-secondary shrink-0" />
                         <span>Supreme Court Representation</span>
@@ -363,14 +363,14 @@ export default function Home() {
                 <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">Why clients trust our representation</h2>
               </div>
               
-              <div className="space-y-6">
+              <div className="space-y-6 font-light">
                 <div className="flex gap-4 group">
                   <div className="mt-1 bg-white border border-slate-200 p-3 rounded-xl h-fit text-secondary group-hover:border-secondary/40 transition-all duration-300 shadow-xs">
                     <Award className="h-6 w-6" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-slate-900 mb-1.5">Unrivaled Track Record</h3>
-                    <p className="text-sm text-slate-505 leading-relaxed font-light">Recognized as one of the leading boutique law firms in Nepal, handling major FDI and corporate registrations.</p>
+                    <h3 className="text-lg font-bold text-slate-900 mb-1.5 font-sans">Unrivaled Track Record</h3>
+                    <p className="text-sm text-slate-505 leading-relaxed">Recognized as one of the leading boutique law firms in Nepal, handling major FDI and corporate registrations.</p>
                   </div>
                 </div>
 
@@ -379,8 +379,8 @@ export default function Home() {
                     <ShieldCheck className="h-6 w-6" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-slate-900 mb-1.5">Ethical & Compliant</h3>
-                    <p className="text-sm text-slate-550 leading-relaxed font-light">Absolute adherence to transparency, regulatory compliance, and confidentiality. Your data and interests are safe.</p>
+                    <h3 className="text-lg font-bold text-slate-900 mb-1.5 font-sans">Ethical & Compliant</h3>
+                    <p className="text-sm text-slate-550 leading-relaxed">Absolute adherence to transparency, regulatory compliance, and confidentiality. Your data and interests are safe.</p>
                   </div>
                 </div>
 
@@ -389,8 +389,8 @@ export default function Home() {
                     <Zap className="h-6 w-6" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-slate-900 mb-1.5">Result-Driven Counsel</h3>
-                    <p className="text-sm text-slate-550 leading-relaxed font-light">We deliver practical and commercial solutions to legal hurdles, rather than just abstract legal opinions.</p>
+                    <h3 className="text-lg font-bold text-slate-900 mb-1.5 font-sans">Result-Driven Counsel</h3>
+                    <p className="text-sm text-slate-550 leading-relaxed">We deliver practical and commercial solutions to legal hurdles, rather than just abstract legal opinions.</p>
                   </div>
                 </div>
               </div>
@@ -398,7 +398,7 @@ export default function Home() {
 
             <ScrollReveal className="relative group">
               {/* Glowing background borders around image */}
-              <div className="absolute -inset-1.5 rounded-2xl bg-gradient-to-r from-blue-700 via-teal-600 to-amber-500 opacity-15 blur-md group-hover:opacity-25 transition duration-500" />
+              <div className="absolute -inset-1.5 rounded-2xl bg-gradient-to-r from-[#064e3b] via-[#0d9488] to-[#34d399] opacity-15 blur-md group-hover:opacity-25 transition duration-500" />
               
               <div className="relative rounded-2xl h-[450px] w-full overflow-hidden shadow-xl bg-white border border-slate-200/60">
                 <Image 
@@ -409,8 +409,8 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 via-transparent to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 p-6 rounded-xl glass-panel border border-slate-200/50">
-                  <p className="text-sm font-semibold text-slate-900 mb-1">Yukti Legal Services Board</p>
-                  <p className="text-xs text-secondary font-semibold">Experienced Advocates & Registered Consultants</p>
+                  <p className="text-sm font-semibold text-slate-900 mb-1 font-sans">Yukti Legal Services Board</p>
+                  <p className="text-xs text-secondary font-semibold font-sans">Experienced Advocates & Registered Consultants</p>
                 </div>
               </div>
             </ScrollReveal>
@@ -429,14 +429,14 @@ export default function Home() {
             <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 leading-tight">
               Initiate your legal partnership today
             </h2>
-            <p className="text-slate-555 text-base md:text-lg leading-relaxed max-w-xl mx-auto font-light">
+            <p className="text-slate-555 text-base md:text-lg leading-relaxed max-w-xl mx-auto font-light font-sans">
               Schedule a private consultation with our advocates to discuss your business establishment or litigation requirements.
             </p>
             <div className="pt-4">
               <Magnetic>
                 <Link 
                   href="/contact" 
-                  className="inline-flex h-12.5 items-center justify-center rounded-full bg-gradient-to-r from-blue-700 via-teal-600 to-amber-500 px-9 text-sm font-semibold text-white shadow-lg shadow-secondary/10 hover:shadow-secondary/25 hover:scale-103 transition-all duration-300 cursor-pointer"
+                  className="inline-flex h-12.5 items-center justify-center rounded-full bg-gradient-to-r from-[#064e3b] via-[#0d9488] to-[#34d399] px-9 text-sm font-semibold text-white shadow-lg shadow-secondary/10 hover:shadow-secondary/25 hover:scale-103 transition-all duration-300 cursor-pointer"
                 >
                   Request Case Evaluation
                 </Link>

@@ -40,14 +40,14 @@ export function Navbar() {
     <>
       {/* Scroll Progress Bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-blue-700 via-teal-600 to-amber-500 z-50 origin-left"
+        className="fixed top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#064e3b] via-[#0d9488] to-[#34d399] z-50 origin-left"
         style={{ scaleX }}
       />
 
       <header
         className={`sticky top-0 z-40 w-full transition-all duration-350 ${
           isScrolled
-            ? "bg-[#faf9f5]/85 backdrop-blur-md border-b border-slate-200/50 py-4 shadow-sm"
+            ? "bg-[#f4f6f4]/85 backdrop-blur-md border-b border-slate-200/50 py-4 shadow-sm"
             : "bg-transparent border-b border-transparent py-6"
         }`}
       >
@@ -74,7 +74,7 @@ export function Navbar() {
                     {isActive && (
                       <motion.span
                         layoutId="activeNavIndicator"
-                        className="absolute bottom-0 left-2.5 right-2.5 h-[2px] bg-gradient-to-r from-blue-700 via-teal-600 to-amber-500"
+                        className="absolute bottom-0 left-2.5 right-2.5 h-[2px] bg-gradient-to-r from-[#064e3b] via-[#0d9488] to-[#34d399]"
                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
                       />
                     )}
@@ -91,7 +91,7 @@ export function Navbar() {
             </div>
             <Link
               href="/contact"
-              className="hidden md:inline-flex h-11 items-center justify-center rounded-full bg-gradient-to-r from-blue-700 via-teal-600 to-amber-500 px-6 text-sm font-semibold text-white shadow-md shadow-secondary/10 hover:shadow-secondary/25 hover:scale-105 transition-all duration-300"
+              className="hidden md:inline-flex h-11 items-center justify-center rounded-full bg-gradient-to-r from-[#064e3b] via-[#0d9488] to-[#34d399] px-6 text-sm font-semibold text-white shadow-md shadow-secondary/10 hover:shadow-secondary/25 hover:scale-105 transition-all duration-300"
             >
               Book Consultation
             </Link>
@@ -113,7 +113,7 @@ export function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 right-0 bg-[#faf9f5] border-b border-slate-200 p-6 flex flex-col gap-4 md:hidden z-50 shadow-lg"
+            className="absolute top-full left-0 right-0 bg-[#f4f6f4] border-b border-slate-200 p-6 flex flex-col gap-4 md:hidden z-50 shadow-lg"
           >
             {navItems.map((item) => (
               <Link
@@ -135,7 +135,7 @@ export function Navbar() {
               <Link
                 href="/contact"
                 onClick={() => setIsOpen(false)}
-                className="flex h-12 items-center justify-center rounded-xl bg-gradient-to-r from-blue-700 via-teal-600 to-amber-500 text-sm font-semibold text-white"
+                className="flex h-12 items-center justify-center rounded-xl bg-gradient-to-r from-[#064e3b] via-[#0d9488] to-[#34d399] text-sm font-semibold text-white"
               >
                 Book Consultation
               </Link>

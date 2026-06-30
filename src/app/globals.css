@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --background: #faf9f5; /* warm luxury alabaster */
-  --foreground: #090d16; /* luxury deep midnight navy */
-  --primary: #080e1a; /* deep sapphire navy */
+  --background: #f4f6f4; /* soft luxury mint-gray */
+  --foreground: #0b1a15; /* deep forest-black */
+  --primary: #052e21; /* deep forest green */
   --primary-foreground: #ffffff;
   --secondary: #0f5c4b; /* deep forest emerald */
   --secondary-foreground: #ffffff;
-  --muted: #f4f3ee; /* warm plaster */
-  --muted-foreground: #5c626e; /* slate-gray */
-  --accent: #f0fdf4; /* soft mint */
+  --muted: #ebeeeb; /* warm plaster mint */
+  --muted-foreground: #4b554e; /* sage-gray */
+  --accent: #ecfdf5; /* soft mint */
   --accent-foreground: #0f5c4b;
   
   /* Signature Prestige Palette */
-  --gradient-1: #1e3a8a; /* Sapphire Blue */
+  --gradient-1: #064e3b; /* Deep Forest Green */
   --gradient-2: #0d9488; /* Emerald Teal */
-  --gradient-3: #c5a880; /* Champagne Gold */
+  --gradient-3: #34d399; /* Sage Green */
   --border-glow: rgba(13, 148, 136, 0.05);
 }
 

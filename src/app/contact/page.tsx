@@ -209,7 +209,7 @@ export default function ContactPage() {
                   {/* Submit Button */}
                   <button 
                     type="submit" 
-                    className="w-full h-12.5 bg-gradient-to-r from-blue-700 via-teal-600 to-amber-500 text-white font-bold rounded-full hover:shadow-xl hover:shadow-secondary/15 hover:scale-101 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+                    className="w-full h-12.5 bg-gradient-to-r from-[#064e3b] via-[#0d9488] to-[#34d399] text-white font-bold rounded-full hover:shadow-xl hover:shadow-secondary/15 hover:scale-101 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <Send className="h-4 w-4" /> Submit Consultation Request
                   </button>

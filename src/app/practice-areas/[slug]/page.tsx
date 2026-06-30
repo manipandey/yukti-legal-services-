@@ -103,7 +103,7 @@ export default async function ServicePage({ params }: Props) {
                 <div className="pt-2">
                   <Link 
                     href="/contact" 
-                    className="flex w-full h-11 items-center justify-center rounded-full bg-gradient-to-r from-blue-700 via-teal-600 to-amber-500 text-xs font-bold text-white shadow-md hover:scale-103 transition-all duration-300"
+                    className="flex w-full h-11 items-center justify-center rounded-full bg-gradient-to-r from-[#064e3b] via-[#0d9488] to-[#34d399] text-xs font-bold text-white shadow-md hover:scale-103 transition-all duration-300"
                   >
                     Book Consultation
                   </Link>
