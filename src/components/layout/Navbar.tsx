@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, Phone, X } from "lucide-react";
 import { motion, useScroll, useSpring } from "framer-motion";
+import { Magnetic } from "@/components/ui/Magnetic";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -58,26 +59,27 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
+          <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
               return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={`relative py-2 text-sm font-medium transition-colors hover:text-foreground duration-300 ${
-                    isActive ? "text-foreground font-semibold" : "text-slate-555"
-                  }`}
-                >
-                  {item.label}
-                  {isActive && (
-                    <motion.span
-                      layoutId="activeNavIndicator"
-                      className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-blue-700 via-teal-600 to-amber-500"
-                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                    />
-                  )}
-                </Link>
+                <Magnetic key={item.href}>
+                  <Link
+                    href={item.href}
+                    className={`relative px-2.5 py-2 text-sm font-medium transition-colors hover:text-foreground duration-300 block ${
+                      isActive ? "text-foreground font-semibold" : "text-slate-555"
+                    }`}
+                  >
+                    {item.label}
+                    {isActive && (
+                      <motion.span
+                        layoutId="activeNavIndicator"
+                        className="absolute bottom-0 left-2.5 right-2.5 h-[2px] bg-gradient-to-r from-blue-700 via-teal-600 to-amber-500"
+                        transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                      />
+                    )}
+                  </Link>
+                </Magnetic>
               );
             })}
           </nav>

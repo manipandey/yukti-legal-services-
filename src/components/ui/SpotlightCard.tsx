@@ -12,7 +12,7 @@ interface SpotlightCardProps {
 export function SpotlightCard({
   children,
   className = "",
-  glowColor = "rgba(13, 148, 136, 0.06)",
+  glowColor = "rgba(13, 148, 136, 0.05)",
 }: SpotlightCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [coords, setCoords] = useState({ x: 0, y: 0 });
@@ -66,36 +66,40 @@ export function SpotlightCard({
         rotateY,
         transformStyle: "preserve-3d",
         perspective: "1000px",
-        background: "rgba(255, 255, 255, 0.55)",
-        backdropFilter: "blur(12px)",
-        WebkitBackdropFilter: "blur(12px)",
       }}
-      className={`relative overflow-hidden rounded-2xl border border-slate-200/60 p-8 transition-all duration-300 hover:border-secondary/30 hover:shadow-xl hover:shadow-secondary/[0.02] ${className}`}
+      className="relative rounded-2xl p-[1px] transition-all duration-300 hover:shadow-2xl hover:shadow-slate-900/[0.02] h-full w-full"
     >
-      {/* Spotlight Radial Background Glow */}
+      {/* Outer Mouse-Tracking Border Glow (1px visible edge) */}
       <div
-        className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition-opacity duration-500"
+        className="absolute inset-0 rounded-2xl transition-opacity duration-500 pointer-events-none"
         style={{
-          opacity: isFocused ? 1 : 0,
-          background: `radial-gradient(350px circle at ${coords.x}px ${coords.y}px, ${glowColor}, transparent 80%)`,
-          transform: "translateZ(0px)",
+          opacity: isFocused ? 1 : 0.35,
+          background: isFocused 
+            ? `radial-gradient(130px circle at ${coords.x}px ${coords.y}px, rgba(13, 148, 136, 0.35), transparent 100%)`
+            : "rgba(13, 148, 136, 0.08)",
         }}
       />
-
-      {/* Spotlight Border Glow */}
-      <div
-        className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition-opacity duration-500"
+      
+      {/* Inner Card Body (Inherits padding, height, and flex from className) */}
+      <div 
+        className={`relative rounded-[15px] bg-white/75 backdrop-blur-xl h-full w-full overflow-hidden ${className}`}
         style={{
-          opacity: isFocused ? 1 : 0,
-          background: `radial-gradient(100px circle at ${coords.x}px ${coords.y}px, rgba(13, 148, 136, 0.08), transparent 100%)`,
-          border: "1px solid rgba(13, 148, 136, 0.18)",
-          transform: "translateZ(0px)",
+          transformStyle: "preserve-3d",
         }}
-      />
+      >
+        {/* Spotlight Radial Background Glow */}
+        <div
+          className="pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-500"
+          style={{
+            opacity: isFocused ? 1 : 0,
+            background: `radial-gradient(350px circle at ${coords.x}px ${coords.y}px, ${glowColor}, transparent 80%)`,
+          }}
+        />
 
-      {/* Content - floats slightly above background for parallax depth */}
-      <div className="relative z-10" style={{ transform: "translateZ(15px)" }}>
-        {children}
+        {/* Content - floats slightly above background for parallax depth */}
+        <div className="relative z-10 w-full h-full flex flex-col justify-between" style={{ transform: "translateZ(15px)" }}>
+          {children}
+        </div>
       </div>
     </motion.div>
   );

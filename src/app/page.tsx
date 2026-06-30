@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Scale, Briefcase, Globe, Users, Landmark, Gavel, Award, ShieldCheck, Zap } from "lucide-react";
+import { ArrowRight, Scale, Briefcase, Globe, Users, Landmark, Gavel, Award, ShieldCheck, Zap, CheckCircle2 } from "lucide-react";
 import { FadeIn, SlideInLeft, StaggerContainer, StaggerItem, ScrollReveal } from "@/components/ui/MotionWrapper";
 import { SpotlightCard } from "@/components/ui/SpotlightCard";
 import { Counter } from "@/components/ui/Counter";
@@ -122,7 +122,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Practice Areas Section */}
+      {/* Practice Areas Section (Bento Grid) */}
       <section className="py-24 lg:py-32 relative">
         <div className="absolute top-1/4 left-0 w-[400px] h-[400px] bg-radial-gradient(circle, rgba(13, 148, 136, 0.02) 0%, rgba(0,0,0,0) 70%) pointer-events-none filter blur-3xl" />
         <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -137,43 +137,184 @@ export default function Home() {
             </p>
           </div>
 
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6.5">
-            <ServiceCard 
-              icon={<Briefcase className="h-6 w-6 text-secondary" />}
-              title="Corporate Law & M&A"
-              description="Structuring transactions, compliance audits, joint ventures, and advisory for multinational enterprises."
-              href="/practice-areas/corporate-law"
-            />
-            <ServiceCard 
-              icon={<Scale className="h-6 w-6 text-secondary" />}
-              title="Company Registration"
-              description="End-to-end OCR registration, corporate governance, post-registration licensing, and tax registrations."
-              href="/practice-areas/company-registration"
-            />
-            <ServiceCard 
-              icon={<Globe className="h-6 w-6 text-secondary" />}
-              title="Foreign Investment (FDI)"
-              description="Advising on foreign investments, obtaining approvals from FITTA/IBN, and navigating capital repatriation."
-              href="/practice-areas/foreign-investment"
-            />
-            <ServiceCard 
-              icon={<Landmark className="h-6 w-6 text-secondary" />}
-              title="Property & Land Law"
-              description="Due diligence on land ownership, title verification, lease agreements, and high-value real estate transactions."
-              href="/practice-areas/property-law"
-            />
-            <ServiceCard 
-              icon={<Users className="h-6 w-6 text-secondary" />}
-              title="Family Law & Wealth"
-              description="Comprehensive wealth planning, estate management, property division, and confidential family dispute resolution."
-              href="/practice-areas/family-law"
-            />
-            <ServiceCard 
-              icon={<Gavel className="h-6 w-6 text-secondary" />}
-              title="Commercial Litigation"
-              description="Aggressive and result-oriented representation in commercial arbitrations and civil disputes before Nepalese courts."
-              href="/practice-areas/civil-litigation"
-            />
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            {/* 1. Corporate Law (Large Bento Card - 2 cols) */}
+            <StaggerItem className="lg:col-span-2">
+              <SpotlightCard className="h-full">
+                <div className="grid md:grid-cols-12 gap-8 h-full items-center">
+                  <div className="md:col-span-7 flex flex-col justify-between h-full space-y-6">
+                    <div>
+                      <div className="mb-6 inline-flex bg-white border border-slate-200/60 p-3.5 rounded-xl text-secondary shadow-xs">
+                        <Briefcase className="h-6 w-6" />
+                      </div>
+                      <h3 className="mb-3 text-2xl font-bold text-slate-900">Corporate Law & M&A</h3>
+                      <p className="text-slate-550 text-sm leading-relaxed font-light">
+                        Structuring complex transactions, joint ventures, corporate compliance, and strategic advisory for multinational enterprises operating in Nepal.
+                      </p>
+                    </div>
+                    <Link 
+                      href="/practice-areas/corporate-law" 
+                      className="inline-flex items-center text-sm font-semibold text-secondary hover:text-teal-600 transition-colors group/link pt-4"
+                    >
+                      Detailed services <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover/link:translate-x-1.5" />
+                    </Link>
+                  </div>
+                  <div className="md:col-span-5 bg-slate-50/50 border border-slate-200/60 p-6 rounded-2xl space-y-4">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">Core Focus Areas</h4>
+                    <ul className="space-y-2.5 text-sm text-slate-650">
+                      <li className="flex items-center gap-2">
+                        <CheckCircle2 className="h-4.5 w-4.5 text-secondary shrink-0" />
+                        <span>M&A Transactions</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle2 className="h-4.5 w-4.5 text-secondary shrink-0" />
+                        <span>Joint Ventures</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle2 className="h-4.5 w-4.5 text-secondary shrink-0" />
+                        <span>FDI Compliance</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle2 className="h-4.5 w-4.5 text-secondary shrink-0" />
+                        <span>Corporate Governance</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </SpotlightCard>
+            </StaggerItem>
+
+            {/* 2. Company Registration (Standard Card) */}
+            <StaggerItem>
+              <SpotlightCard className="h-full flex flex-col justify-between">
+                <div>
+                  <div className="mb-6 inline-flex bg-white border border-slate-200/60 p-3.5 rounded-xl text-secondary shadow-xs">
+                    <Scale className="h-6 w-6" />
+                  </div>
+                  <h3 className="mb-3 text-xl font-bold text-slate-900">Company Registration</h3>
+                  <p className="text-slate-550 text-sm leading-relaxed mb-6 font-light">
+                    End-to-end OCR registration, corporate structuring, licensing, and taxation setup.
+                  </p>
+                </div>
+                <Link 
+                  href="/practice-areas/company-registration" 
+                  className="inline-flex items-center text-sm font-semibold text-secondary hover:text-teal-600 transition-colors group/link mt-auto"
+                >
+                  Detailed services <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover/link:translate-x-1.5" />
+                </Link>
+              </SpotlightCard>
+            </StaggerItem>
+
+            {/* 3. Foreign Investment (Standard Card) */}
+            <StaggerItem>
+              <SpotlightCard className="h-full flex flex-col justify-between">
+                <div>
+                  <div className="mb-6 inline-flex bg-white border border-slate-200/60 p-3.5 rounded-xl text-secondary shadow-xs">
+                    <Globe className="h-6 w-6" />
+                  </div>
+                  <h3 className="mb-3 text-xl font-bold text-slate-900">Foreign Investment (FDI)</h3>
+                  <p className="text-slate-550 text-sm leading-relaxed mb-6 font-light">
+                    Navigating FITTA approvals, IBN clearances, and securing capital repatriation pathways.
+                  </p>
+                </div>
+                <Link 
+                  href="/practice-areas/foreign-investment" 
+                  className="inline-flex items-center text-sm font-semibold text-secondary hover:text-teal-600 transition-colors group/link mt-auto"
+                >
+                  Detailed services <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover/link:translate-x-1.5" />
+                </Link>
+              </SpotlightCard>
+            </StaggerItem>
+
+            {/* 4. Property & Land Law (Standard Card) */}
+            <StaggerItem>
+              <SpotlightCard className="h-full flex flex-col justify-between">
+                <div>
+                  <div className="mb-6 inline-flex bg-white border border-slate-200/60 p-3.5 rounded-xl text-secondary shadow-xs">
+                    <Landmark className="h-6 w-6" />
+                  </div>
+                  <h3 className="mb-3 text-xl font-bold text-slate-900">Property & Land Law</h3>
+                  <p className="text-slate-550 text-sm leading-relaxed mb-6 font-light">
+                    Due diligence, title verification, and facilitation of high-value commercial leases.
+                  </p>
+                </div>
+                <Link 
+                  href="/practice-areas/property-law" 
+                  className="inline-flex items-center text-sm font-semibold text-secondary hover:text-teal-600 transition-colors group/link mt-auto"
+                >
+                  Detailed services <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover/link:translate-x-1.5" />
+                </Link>
+              </SpotlightCard>
+            </StaggerItem>
+
+            {/* 5. Family Law & Wealth (Standard Card) */}
+            <StaggerItem>
+              <SpotlightCard className="h-full flex flex-col justify-between">
+                <div>
+                  <div className="mb-6 inline-flex bg-white border border-slate-200/60 p-3.5 rounded-xl text-secondary shadow-xs">
+                    <Users className="h-6 w-6" />
+                  </div>
+                  <h3 className="mb-3 text-xl font-bold text-slate-900">Family Law & Wealth</h3>
+                  <p className="text-slate-550 text-sm leading-relaxed mb-6 font-light">
+                    Estate planning, asset protection, and confidential family dispute resolution.
+                  </p>
+                </div>
+                <Link 
+                  href="/practice-areas/family-law" 
+                  className="inline-flex items-center text-sm font-semibold text-secondary hover:text-teal-600 transition-colors group/link mt-auto"
+                >
+                  Detailed services <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover/link:translate-x-1.5" />
+                </Link>
+              </SpotlightCard>
+            </StaggerItem>
+
+            {/* 6. Commercial Litigation (Large Bento Card - 2 cols) */}
+            <StaggerItem className="lg:col-span-2">
+              <SpotlightCard className="h-full">
+                <div className="grid md:grid-cols-12 gap-8 h-full items-center">
+                  <div className="md:col-span-7 flex flex-col justify-between h-full space-y-6">
+                    <div>
+                      <div className="mb-6 inline-flex bg-white border border-slate-200/60 p-3.5 rounded-xl text-secondary shadow-xs">
+                        <Gavel className="h-6 w-6" />
+                      </div>
+                      <h3 className="mb-3 text-2xl font-bold text-slate-900">Commercial Litigation</h3>
+                      <p className="text-slate-550 text-sm leading-relaxed font-light">
+                        Aggressive, results-driven legal representation in high-stakes commercial arbitrations and civil disputes before all levels of Nepalese courts.
+                      </p>
+                    </div>
+                    <Link 
+                      href="/practice-areas/civil-litigation" 
+                      className="inline-flex items-center text-sm font-semibold text-secondary hover:text-teal-600 transition-colors group/link pt-4"
+                    >
+                      Detailed services <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover/link:translate-x-1.5" />
+                    </Link>
+                  </div>
+                  <div className="md:col-span-5 bg-slate-50/50 border border-slate-200/60 p-6 rounded-2xl space-y-4">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">Success Indicators</h4>
+                    <ul className="space-y-2.5 text-sm text-slate-650">
+                      <li className="flex items-center gap-2">
+                        <CheckCircle2 className="h-4.5 w-4.5 text-secondary shrink-0" />
+                        <span>Supreme Court Representation</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle2 className="h-4.5 w-4.5 text-secondary shrink-0" />
+                        <span>98% Litigation Success Rate</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle2 className="h-4.5 w-4.5 text-secondary shrink-0" />
+                        <span>Arbitration & Mediation</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle2 className="h-4.5 w-4.5 text-secondary shrink-0" />
+                        <span>Fast-Track Dispute Resolution</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </SpotlightCard>
+            </StaggerItem>
+
           </StaggerContainer>
         </div>
       </section>
@@ -305,28 +446,5 @@ export default function Home() {
         </div>
       </section>
     </div>
-  );
-}
-
-function ServiceCard({ icon, title, description, href }: { icon: React.ReactNode, title: string, description: string, href: string }) {
-  return (
-    <StaggerItem>
-      <SpotlightCard className="h-full flex flex-col justify-between group">
-        <div>
-          {/* Animated Glow on Icon */}
-          <div className="mb-6 inline-flex bg-white border border-slate-200/60 p-3.5 rounded-xl text-secondary transform transition-all duration-500 group-hover:scale-110 group-hover:border-secondary/25 shadow-xs">
-            {icon}
-          </div>
-          <h3 className="mb-3 text-xl font-bold text-slate-900 group-hover:text-secondary transition-colors duration-300">{title}</h3>
-          <p className="text-slate-550 text-sm leading-relaxed mb-6 font-light">{description}</p>
-        </div>
-        <Link 
-          href={href} 
-          className="inline-flex items-center text-sm font-semibold text-secondary hover:text-teal-600 transition-colors group/link mt-auto"
-        >
-          Detailed services <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover/link:translate-x-1.5" />
-        </Link>
-      </SpotlightCard>
-    </StaggerItem>
   );
 }
