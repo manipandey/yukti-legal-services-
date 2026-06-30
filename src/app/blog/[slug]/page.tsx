@@ -36,13 +36,13 @@ export default async function BlogPostPage({ params }: Props) {
   return (
     <div className="flex flex-col w-full bg-background text-foreground overflow-hidden">
       {/* Header */}
-      <section className="relative py-24 md:py-32 border-b border-slate-100 bg-[radial-gradient(circle_at_50%_120%,rgba(181,148,104,0.03)_0%,transparent_50%)]">
+      <section className="relative py-24 md:py-32 border-b border-slate-100 bg-[radial-gradient(circle_at_50%_120%,rgba(30, 64, 175, 0.03)_0%,transparent_50%)]">
         <div className="container mx-auto px-4 md:px-6 max-w-4xl space-y-6">
-          <Link href="/blog" className="inline-flex items-center text-xs font-bold tracking-widest text-secondary hover:text-amber-555 transition-colors uppercase">
+          <Link href="/blog" className="inline-flex items-center text-xs font-bold tracking-widest text-secondary hover:text-blue-550 transition-colors uppercase">
             <ArrowLeft className="mr-1.5 h-3.5 w-3.5" /> Back to Insights
           </Link>
           
-          <div className="flex flex-wrap items-center gap-4 text-xs text-slate-500">
+          <div className="flex flex-wrap items-center gap-4 text-xs text-slate-505">
             <span className="bg-slate-50 border border-slate-200 text-secondary px-3.5 py-1 rounded-full font-semibold uppercase tracking-wider shadow-xs">
               {blog.category}
             </span>
@@ -78,7 +78,7 @@ export default async function BlogPostPage({ params }: Props) {
                 [&>ol]:list-decimal [&>ol]:pl-6 [&>ol]:space-y-2 [&>ol]:my-4
                 [&>li]:text-slate-600
                 [&>strong]:text-slate-900 [&>strong]:font-semibold
-                [&>a]:text-secondary [&>a]:underline hover:[&>a]:text-amber-600"
+                [&>a]:text-secondary [&>a]:underline hover:[&>a]:text-blue-600"
               dangerouslySetInnerHTML={{ __html: blog.content }} 
             />
           </FadeIn>

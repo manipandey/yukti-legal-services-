@@ -12,7 +12,7 @@ interface SpotlightCardProps {
 export function SpotlightCard({
   children,
   className = "",
-  glowColor = "rgba(181, 148, 104, 0.08)",
+  glowColor = "rgba(13, 148, 136, 0.06)",
 }: SpotlightCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [coords, setCoords] = useState({ x: 0, y: 0 });
@@ -87,8 +87,8 @@ export function SpotlightCard({
         className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition-opacity duration-500"
         style={{
           opacity: isFocused ? 1 : 0,
-          background: `radial-gradient(100px circle at ${coords.x}px ${coords.y}px, rgba(181, 148, 104, 0.1), transparent 100%)`,
-          border: "1px solid rgba(181, 148, 104, 0.2)",
+          background: `radial-gradient(100px circle at ${coords.x}px ${coords.y}px, rgba(13, 148, 136, 0.08), transparent 100%)`,
+          border: "1px solid rgba(13, 148, 136, 0.18)",
           transform: "translateZ(0px)",
         }}
       />

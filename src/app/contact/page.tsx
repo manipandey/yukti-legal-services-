@@ -209,7 +209,7 @@ export default function ContactPage() {
                   {/* Submit Button */}
                   <button 
                     type="submit" 
-                    className="w-full h-12.5 bg-gradient-to-r from-secondary to-amber-400 text-white font-bold rounded-full hover:shadow-xl hover:shadow-secondary/15 hover:scale-101 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+                    className="w-full h-12.5 bg-gradient-to-r from-blue-700 via-teal-600 to-amber-500 text-white font-bold rounded-full hover:shadow-xl hover:shadow-secondary/15 hover:scale-101 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <Send className="h-4 w-4" /> Submit Consultation Request
                   </button>
@@ -248,12 +248,12 @@ export default function ContactPage() {
       </section>
 
       {/* Stylized Map Representation */}
-      <section className="h-[400px] w-full bg-slate-50 border-t border-slate-200 relative flex items-center justify-center overflow-hidden">
+      <section className="h-[400px] w-full bg-slate-55 border-t border-slate-200 relative flex items-center justify-center overflow-hidden">
         {/* Abstract futuristic grid representing location */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(9,13,22,0.01)_1px,transparent_1px),linear-gradient(to_bottom,rgba(9,13,22,0.01)_1px,transparent_1px)] bg-[size:2rem_2rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_80%,transparent_100%)] pointer-events-none" />
         
         <div className="absolute w-[300px] h-[300px] pointer-events-none filter blur-3xl"
-             style={{ background: "radial-gradient(circle, rgba(181,148,104,0.03) 0%, rgba(0,0,0,0) 70%)" }} />
+             style={{ background: "radial-gradient(circle, rgba(13, 148, 136, 0.03) 0%, rgba(0,0,0,0) 70%)" }} />
         
         <div className="relative text-center space-y-4 z-10 p-6 glass-panel border-slate-200 rounded-2xl max-w-md shadow-md">
           <MapPin className="h-8 w-8 text-secondary mx-auto animate-bounce" />

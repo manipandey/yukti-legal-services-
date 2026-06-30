@@ -35,9 +35,9 @@ export default async function ServicePage({ params }: Props) {
   return (
     <div className="flex flex-col w-full bg-background text-foreground overflow-hidden">
       {/* Header */}
-      <section className="relative py-24 md:py-32 border-b border-slate-100 bg-[radial-gradient(circle_at_50%_120%,rgba(181,148,104,0.03)_0%,transparent_50%)]">
+      <section className="relative py-24 md:py-32 border-b border-slate-100 bg-[radial-gradient(circle_at_50%_120%,rgba(13, 148, 136, 0.03)_0%,transparent_50%)]">
         <FadeIn className="container mx-auto px-4 md:px-6 text-center space-y-4">
-          <Link href="/practice-areas" className="text-xs font-bold tracking-widest text-secondary hover:text-amber-555 transition-colors uppercase">
+          <Link href="/practice-areas" className="text-xs font-bold tracking-widest text-secondary hover:text-blue-500 transition-colors uppercase">
             &larr; Back to Practice Areas
           </Link>
           <h1 className="text-4xl md:text-6xl font-serif font-bold text-slate-900 tracking-tight pt-2">{service.title}</h1>
@@ -95,7 +95,7 @@ export default async function ServicePage({ params }: Props) {
                 <div className="space-y-2">
                   <ShieldCheck className="h-8 w-8 text-secondary" />
                   <h3 className="text-xl font-serif font-bold text-slate-900">Need Advisory?</h3>
-                  <p className="text-xs text-slate-500 leading-relaxed">
+                  <p className="text-xs text-slate-550 leading-relaxed">
                     Schedule a private consultation regarding {service.title} with our specialized lawyers.
                   </p>
                 </div>
@@ -103,7 +103,7 @@ export default async function ServicePage({ params }: Props) {
                 <div className="pt-2">
                   <Link 
                     href="/contact" 
-                    className="flex w-full h-11 items-center justify-center rounded-full bg-gradient-to-r from-secondary to-amber-400 text-xs font-bold text-white shadow-md hover:scale-103 transition-all duration-300"
+                    className="flex w-full h-11 items-center justify-center rounded-full bg-gradient-to-r from-blue-700 via-teal-600 to-amber-500 text-xs font-bold text-white shadow-md hover:scale-103 transition-all duration-300"
                   >
                     Book Consultation
                   </Link>

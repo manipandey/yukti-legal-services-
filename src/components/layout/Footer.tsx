@@ -7,7 +7,7 @@ export function Footer() {
       {/* Ambient background glow */}
       <div 
         className="absolute bottom-0 right-0 w-[400px] h-[400px] pointer-events-none filter blur-3xl"
-        style={{ background: "radial-gradient(circle, rgba(181, 148, 104, 0.04) 0%, rgba(0,0,0,0) 70%)" }}
+        style={{ background: "radial-gradient(circle, rgba(30, 64, 175, 0.04) 0%, rgba(0,0,0,0) 70%)" }}
       />
       <div 
         className="absolute top-0 left-10 w-[300px] h-[300px] pointer-events-none filter blur-3xl"
@@ -19,7 +19,7 @@ export function Footer() {
           {/* Brand Column */}
           <div className="md:col-span-4 space-y-6">
             <h3 className="text-2xl font-bold tracking-tight text-white">
-              Yukti Legal <span className="text-gradient-gold">Services</span>
+              Yukti Legal <span className="text-gradient-blue">Services</span>
             </h3>
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
               Providing trusted, professional, and result-oriented legal services across Nepal. We blend traditional excellence with modern strategy to protect your interests.
@@ -33,7 +33,7 @@ export function Footer() {
               </Link>
               <Link
                 href="#"
-                className="w-10 h-10 rounded-full bg-slate-900 border border-slate-805 flex items-center justify-center text-slate-400 hover:text-secondary hover:border-secondary/40 hover:scale-115 transition-all duration-300"
+                className="w-10 h-10 rounded-full bg-slate-900 border border-slate-850 flex items-center justify-center text-slate-400 hover:text-secondary hover:border-secondary/40 hover:scale-115 transition-all duration-300"
               >
                 <MessageCircle className="h-4 w-4" />
               </Link>

@@ -57,7 +57,7 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col w-full bg-background text-foreground overflow-hidden">
       {/* Header */}
-      <section className="relative py-24 md:py-32 border-b border-slate-100 bg-[radial-gradient(circle_at_50%_120%,rgba(181,148,104,0.03)_0%,transparent_50%)]">
+      <section className="relative py-24 md:py-32 border-b border-slate-100 bg-[radial-gradient(circle_at_50%_120%,rgba(30, 64, 175, 0.03)_0%,transparent_50%)]">
         <FadeIn className="container mx-auto px-4 md:px-6 text-center space-y-4">
           <span className="text-xs font-bold tracking-widest text-secondary uppercase block">Who We Are</span>
           <h1 className="text-4xl md:text-6xl font-serif font-bold text-slate-900 tracking-tight">About Our Firm</h1>

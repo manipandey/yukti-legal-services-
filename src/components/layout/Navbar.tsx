@@ -39,21 +39,21 @@ export function Navbar() {
     <>
       {/* Scroll Progress Bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-secondary via-amber-450 to-secondary z-50 origin-left"
+        className="fixed top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-blue-700 via-teal-600 to-amber-500 z-50 origin-left"
         style={{ scaleX }}
       />
 
       <header
         className={`sticky top-0 z-40 w-full transition-all duration-350 ${
           isScrolled
-            ? "bg-white/85 backdrop-blur-md border-b border-slate-200/60 py-4 shadow-sm"
+            ? "bg-[#faf9f5]/85 backdrop-blur-md border-b border-slate-200/50 py-4 shadow-sm"
             : "bg-transparent border-b border-transparent py-6"
         }`}
       >
         <div className="container mx-auto flex items-center justify-between px-4 md:px-6">
           <Link href="/" className="flex items-center space-x-2 group">
             <span className="text-2xl font-bold tracking-tight text-foreground transition-colors group-hover:text-secondary">
-              Yukti Legal <span className="text-gradient-gold">Services</span>
+              Yukti Legal <span className="text-gradient-blue">Services</span>
             </span>
           </Link>
 
@@ -66,14 +66,14 @@ export function Navbar() {
                   key={item.href}
                   href={item.href}
                   className={`relative py-2 text-sm font-medium transition-colors hover:text-foreground duration-300 ${
-                    isActive ? "text-foreground font-semibold" : "text-slate-500"
+                    isActive ? "text-foreground font-semibold" : "text-slate-555"
                   }`}
                 >
                   {item.label}
                   {isActive && (
                     <motion.span
                       layoutId="activeNavIndicator"
-                      className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-secondary to-amber-400"
+                      className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-blue-700 via-teal-600 to-amber-500"
                       transition={{ type: "spring", stiffness: 300, damping: 30 }}
                     />
                   )}
@@ -83,13 +83,13 @@ export function Navbar() {
           </nav>
 
           <div className="flex items-center gap-4">
-            <div className="hidden lg:flex items-center gap-2 text-sm font-medium text-slate-700 bg-slate-100/80 border border-slate-200/50 px-4 py-2 rounded-full">
+            <div className="hidden lg:flex items-center gap-2 text-sm font-medium text-slate-700 bg-white border border-slate-200/50 px-4 py-2 rounded-full shadow-xs">
               <Phone className="h-4 w-4 text-secondary animate-pulse" />
               <span>+977 1-4200000</span>
             </div>
             <Link
               href="/contact"
-              className="hidden md:inline-flex h-11 items-center justify-center rounded-full bg-gradient-to-r from-secondary to-amber-400 px-6 text-sm font-semibold text-white shadow-md shadow-secondary/10 hover:shadow-secondary/25 hover:scale-105 transition-all duration-300"
+              className="hidden md:inline-flex h-11 items-center justify-center rounded-full bg-gradient-to-r from-blue-700 via-teal-600 to-amber-500 px-6 text-sm font-semibold text-white shadow-md shadow-secondary/10 hover:shadow-secondary/25 hover:scale-105 transition-all duration-300"
             >
               Book Consultation
             </Link>
@@ -111,29 +111,29 @@ export function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 right-0 bg-white border-b border-slate-200 p-6 flex flex-col gap-4 md:hidden z-50 shadow-lg"
+            className="absolute top-full left-0 right-0 bg-[#faf9f5] border-b border-slate-200 p-6 flex flex-col gap-4 md:hidden z-50 shadow-lg"
           >
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className={`text-lg font-medium py-2 border-b border-slate-100 ${
-                  pathname === item.href ? "text-secondary font-bold" : "text-slate-755"
+                className={`text-lg font-medium py-2 border-b border-slate-200/50 ${
+                  pathname === item.href ? "text-secondary font-bold" : "text-slate-700"
                 }`}
               >
                 {item.label}
               </Link>
             ))}
             <div className="flex flex-col gap-4 mt-4">
-              <div className="flex items-center gap-2 text-sm text-slate-700">
+              <div className="flex items-center gap-2 text-sm text-slate-755">
                 <Phone className="h-4 w-4 text-secondary" />
                 <span>+977 1-4200000</span>
               </div>
               <Link
                 href="/contact"
                 onClick={() => setIsOpen(false)}
-                className="flex h-12 items-center justify-center rounded-xl bg-gradient-to-r from-secondary to-amber-400 text-sm font-semibold text-white"
+                className="flex h-12 items-center justify-center rounded-xl bg-gradient-to-r from-blue-700 via-teal-600 to-amber-500 text-sm font-semibold text-white"
               >
                 Book Consultation
               </Link>

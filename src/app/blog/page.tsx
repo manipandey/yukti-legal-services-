@@ -10,7 +10,7 @@ export default function BlogPage() {
   return (
     <div className="flex flex-col w-full bg-background text-foreground overflow-hidden">
       {/* Header */}
-      <section className="relative py-24 md:py-32 border-b border-slate-100 bg-[radial-gradient(circle_at_50%_120%,rgba(181,148,104,0.03)_0%,transparent_50%)]">
+      <section className="relative py-24 md:py-32 border-b border-slate-100 bg-[radial-gradient(circle_at_50%_120%,rgba(30, 64, 175, 0.03)_0%,transparent_50%)]">
         <FadeIn className="container mx-auto px-4 md:px-6 text-center space-y-4">
           <span className="text-xs font-bold tracking-widest text-secondary uppercase block">Legal Insights</span>
           <h1 className="text-4xl md:text-6xl font-serif font-bold text-slate-900 tracking-tight">Our Publications</h1>
@@ -31,7 +31,7 @@ export default function BlogPage() {
                 {mockBlogs.map((blog) => (
                   <StaggerItem key={blog.id}>
                     <SpotlightCard className="p-8 group border-slate-200/60 shadow-sm">
-                      <div className="flex flex-col md:flex-row md:items-center gap-4 text-xs text-slate-500 mb-5">
+                      <div className="flex flex-col md:flex-row md:items-center gap-4 text-xs text-slate-550 mb-5">
                         <span className="bg-slate-50 border border-slate-200 text-secondary px-3.5 py-1 rounded-full font-semibold uppercase tracking-wider shadow-xs">
                           {blog.category}
                         </span>
@@ -53,7 +53,7 @@ export default function BlogPage() {
                       
                       <Link 
                         href={`/blog/${blog.slug}`} 
-                        className="inline-flex items-center text-sm font-semibold text-secondary hover:text-amber-555 transition-colors group/link"
+                        className="inline-flex items-center text-sm font-semibold text-secondary hover:text-blue-500 transition-colors group/link"
                       >
                         Read full analysis <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover/link:translate-x-1.5" />
                       </Link>
