@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "title": "Corporate Law",
+    "description": "Expert legal guidance for corporations, startups, and enterprises in Nepal.",
+    "slug": "corporate-law",
+    "icon": "Briefcase"
+  },
+  {
+    "id": "2",
+    "title": "Company Registration",
+    "description": "Seamless and fully compliant company registration services at the OCR.",
+    "slug": "company-registration-nepal",
+    "icon": "Building"
+  },
+  {
+    "id": "3",
+    "title": "Foreign Investment Law",
+    "description": "Advising foreign investors on FDI regulations, approvals, and compliance.",
+    "slug": "foreign-investment-nepal",
+    "icon": "Globe"
+  },
+  {
+    "id": "4",
+    "title": "Property and Land Law",
+    "description": "Handling property disputes, land registration, and real estate transactions.",
+    "slug": "property-law-nepal",
+    "icon": "Landmark"
+  },
+  {
+    "id": "5",
+    "title": "Family Law & Divorce",
+    "description": "Sensitive and confidential legal representation for family disputes.",
+    "slug": "family-law",
+    "icon": "Users"
+  },
+  {
+    "id": "6",
+    "title": "Civil Litigation",
+    "description": "Strong representation in civil disputes in Nepalese courts.",
+    "slug": "civil-litigation",
+    "icon": "Gavel"
+  }
+]

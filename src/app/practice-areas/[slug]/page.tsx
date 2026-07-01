@@ -1,4 +1,4 @@
-import { mockServices } from "@/lib/mockData";
+import { getServices } from "@/lib/db";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { CheckCircle, Phone, Mail, ShieldCheck } from "lucide-react";
@@ -14,7 +14,8 @@ export async function generateMetadata(
   { params }: Props
 ): Promise<Metadata> {
   const { slug } = await params;
-  const service = mockServices.find((s) => s.slug === slug);
+  const services = await getServices();
+  const service = services.find((s) => s.slug === slug);
   
   if (!service) return { title: "Not Found" };
 
@@ -26,14 +27,15 @@ export async function generateMetadata(
 
 export default async function ServicePage({ params }: Props) {
   const { slug } = await params;
-  const service = mockServices.find((s) => s.slug === slug);
+  const services = await getServices();
+  const service = services.find((s) => s.slug === slug);
 
   if (!service) {
     notFound();
   }
 
   return (
-    <div className="flex flex-col w-full bg-background text-foreground overflow-hidden">
+    <div className="flex flex-col w-full bg-background text-foreground overflow-hidden pt-20">
       {/* Header */}
       <section className="relative py-24 md:py-32 border-b border-slate-100 bg-[radial-gradient(circle_at_50%_120%,rgba(13, 148, 136, 0.03)_0%,transparent_50%)]">
         <FadeIn className="container mx-auto px-4 md:px-6 text-center space-y-4">

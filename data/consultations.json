@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Ram Prasad",
+    "phone": "+977 9845012345",
+    "email": "ram@example.com",
+    "issue": "Property & Land Due Diligence",
+    "message": "Need assistance with verification of land registry details for a plot in Lalitpur.",
+    "id": "l24ku0o",
+    "status": "Contacted",
+    "created_at": "2026-07-01T06:02:52.690Z"
+  },
+  {
+    "name": "Ram Prasad",
+    "phone": "+977 9845012345",
+    "email": "ram@example.com",
+    "issue": "Property & Land Due Diligence",
+    "message": "Need assistance with verification of land registry details for a plot in Lalitpur.",
+    "id": "v77ex71",
+    "status": "Pending",
+    "created_at": "2026-07-01T05:59:39.291Z"
+  },
+  {
+    "name": "Hari Devkota",
+    "phone": "+977 9851000000",
+    "email": "hari@example.com",
+    "issue": "Company Registration & OCR Compliance",
+    "message": "Requesting corporate registration support for a new logistics startup in Lalitpur.",
+    "id": "0apnnni",
+    "status": "Pending",
+    "created_at": "2026-07-01T05:56:12.378Z"
+  }
+]

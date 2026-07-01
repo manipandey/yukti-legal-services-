@@ -1,4 +1,4 @@
-import { mockBlogs, mockLawyers } from "@/lib/mockData";
+import { getBlogs, getLawyers } from "@/lib/db";
 import { notFound } from "next/navigation";
 import { Calendar, User, ArrowLeft } from "lucide-react";
 import { Metadata } from "next";
@@ -13,7 +13,8 @@ export async function generateMetadata(
   { params }: Props
 ): Promise<Metadata> {
   const { slug } = await params;
-  const blog = mockBlogs.find((b) => b.slug === slug);
+  const blogs = await getBlogs();
+  const blog = blogs.find((b) => b.slug === slug);
   
   if (!blog) return { title: "Not Found" };
 
@@ -25,16 +26,18 @@ export async function generateMetadata(
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
-  const blog = mockBlogs.find((b) => b.slug === slug);
+  const blogs = await getBlogs();
+  const blog = blogs.find((b) => b.slug === slug);
 
   if (!blog) {
     notFound();
   }
 
-  const author = mockLawyers.find((l) => l.id === blog.author_id);
+  const lawyers = await getLawyers();
+  const author = lawyers.find((l) => l.id === blog.author_id);
 
   return (
-    <div className="flex flex-col w-full bg-background text-foreground overflow-hidden">
+    <div className="flex flex-col w-full bg-background text-foreground overflow-hidden pt-20">
       {/* Header */}
       <section className="relative py-24 md:py-32 border-b border-slate-100 bg-[radial-gradient(circle_at_50%_120%,rgba(30, 64, 175, 0.03)_0%,transparent_50%)]">
         <div className="container mx-auto px-4 md:px-6 max-w-4xl space-y-6">

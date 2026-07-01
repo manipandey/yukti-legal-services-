@@ -162,8 +162,11 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-slate-900 text-center text-xs text-slate-500">
+        <div className="mt-16 pt-8 border-t border-slate-900 text-center text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p>&copy; {new Date().getFullYear()} Yukti Legal Services. All rights reserved. Registered Law Firm in Nepal.</p>
+          <Link href="/login" className="hover:text-secondary hover:underline transition-colors duration-300 font-semibold uppercase tracking-wider text-[10px]">
+            Admin Access
+          </Link>
         </div>
       </div>
     </footer>

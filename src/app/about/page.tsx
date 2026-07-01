@@ -55,13 +55,13 @@ function GlobeIcon(props: React.SVGProps<SVGSVGElement>) {
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col w-full bg-background text-foreground overflow-hidden">
+    <div className="flex flex-col w-full bg-background text-foreground overflow-hidden pt-20">
       {/* Header */}
-      <section className="relative py-24 md:py-32 border-b border-slate-100 bg-[radial-gradient(circle_at_50%_120%,rgba(30, 64, 175, 0.03)_0%,transparent_50%)]">
+      <section className="relative py-24 md:py-32 border-b border-slate-200/50 dark:border-slate-800/40 bg-[radial-gradient(circle_at_50%_120%,rgba(154,120,62,0.03)_0%,transparent_50%)]">
         <FadeIn className="container mx-auto px-4 md:px-6 text-center space-y-4">
           <span className="text-xs font-bold tracking-widest text-secondary uppercase block">Who We Are</span>
-          <h1 className="text-4xl md:text-6xl font-serif font-bold text-slate-900 tracking-tight">About Our Firm</h1>
-          <p className="text-base sm:text-lg md:text-xl text-slate-555 max-w-2xl mx-auto leading-relaxed">
+          <h1 className="text-4xl md:text-6xl font-serif font-bold text-foreground tracking-tight">About Our Firm</h1>
+          <p className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-350 max-w-2xl mx-auto leading-relaxed">
             Redefining legal representation in Nepal with absolute integrity, commercial acumen, and a client-centric philosophy.
           </p>
         </FadeIn>
@@ -73,8 +73,8 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-16 items-center mb-32">
             <SlideInLeft className="space-y-6">
               <span className="text-xs font-bold tracking-widest text-secondary uppercase block">Our Heritage</span>
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900">Shaping legal solutions since 2012</h2>
-              <div className="space-y-4 text-slate-500 leading-relaxed text-sm md:text-base">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">Shaping legal solutions since 2012</h2>
+              <div className="space-y-4 text-slate-500 dark:text-slate-400 leading-relaxed text-sm md:text-base">
                 <p>
                   Yukti Legal Services was founded with a clear vision: to establish a modern, sophisticated legal practice in Nepal capable of navigating the complex regulatory environments faced by local and international businesses.
                 </p>
@@ -89,7 +89,7 @@ export default function AboutPage() {
             
             <ScrollReveal className="relative group">
               <div className="absolute -inset-1.5 rounded-2xl bg-gradient-to-r from-secondary to-amber-200 opacity-15 blur-md group-hover:opacity-25 transition duration-500" />
-              <div className="relative rounded-2xl h-[420px] w-full overflow-hidden shadow-xl bg-slate-50 border border-slate-200/55">
+              <div className="relative rounded-2xl h-[420px] w-full overflow-hidden shadow-xl bg-white dark:bg-slate-900 border border-slate-200/55 dark:border-slate-800/40">
                 <Image 
                   src="/office_interior.png" 
                   alt="Yukti Legal Services Office" 
@@ -104,44 +104,50 @@ export default function AboutPage() {
           {/* Mission / Vision / Values */}
           <StaggerContainer className="grid md:grid-cols-3 gap-6.5 mb-32">
             <StaggerItem>
-              <SpotlightCard className="h-full space-y-4">
-                <h3 className="text-xl font-bold text-slate-900 font-serif border-b border-slate-100 pb-3">Our Mission</h3>
-                <p className="text-slate-500 text-sm leading-relaxed">
-                  To deliver exceptional, commercially-aware, and ethically-uncompromising legal services that secure our clients&apos; interests and foster sustainable business growth in Nepal.
-                </p>
+              <SpotlightCard className="h-full">
+                <div className="p-8 space-y-4">
+                  <h3 className="text-xl font-bold text-foreground font-serif border-b border-slate-200/60 dark:border-slate-800 pb-3">Our Mission</h3>
+                  <p className="text-slate-550 dark:text-slate-400 text-sm leading-relaxed">
+                    To deliver exceptional, commercially-aware, and ethically-uncompromising legal services that secure our clients&apos; interests and foster sustainable business growth in Nepal.
+                  </p>
+                </div>
               </SpotlightCard>
             </StaggerItem>
             
             <StaggerItem>
-              <SpotlightCard className="h-full space-y-4">
-                <h3 className="text-xl font-bold text-slate-900 font-serif border-b border-slate-100 pb-3">Our Vision</h3>
-                <p className="text-slate-555 text-sm leading-relaxed">
-                  To be the leading and most trusted law firm in Nepal, recognized for our unwavering commitment to justice and client success.
-                </p>
+              <SpotlightCard className="h-full">
+                <div className="p-8 space-y-4">
+                  <h3 className="text-xl font-bold text-foreground font-serif border-b border-slate-200/60 dark:border-slate-800 pb-3">Our Vision</h3>
+                  <p className="text-slate-550 dark:text-slate-400 text-sm leading-relaxed">
+                    To be the leading and most trusted law firm in Nepal, recognized for our unwavering commitment to justice and client success.
+                  </p>
+                </div>
               </SpotlightCard>
             </StaggerItem>
             
             <StaggerItem>
-              <SpotlightCard className="h-full space-y-4">
-                <h3 className="text-xl font-bold text-slate-900 font-serif border-b border-slate-100 pb-3">Our Values</h3>
-                <ul className="space-y-3.5 text-slate-500 text-sm">
-                  <li className="flex items-center gap-3">
-                    <CheckCircle className="h-4.5 w-4.5 text-secondary shrink-0" />
-                    <span>Absolute Confidentiality</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle className="h-4.5 w-4.5 text-secondary shrink-0" />
-                    <span>Integrity & Ethical Practice</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle className="h-4.5 w-4.5 text-secondary shrink-0" />
-                    <span>Commercial Strategy (&quot;Yukti&quot;)</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle className="h-4.5 w-4.5 text-secondary shrink-0" />
-                    <span>Excellence in Execution</span>
-                  </li>
-                </ul>
+              <SpotlightCard className="h-full">
+                <div className="p-8 space-y-4">
+                  <h3 className="text-xl font-bold text-foreground font-serif border-b border-slate-200/60 dark:border-slate-800 pb-3">Our Values</h3>
+                  <ul className="space-y-3.5 text-slate-550 dark:text-slate-400 text-sm">
+                    <li className="flex items-center gap-3">
+                      <CheckCircle className="h-4.5 w-4.5 text-secondary shrink-0" />
+                      <span>Absolute Confidentiality</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <CheckCircle className="h-4.5 w-4.5 text-secondary shrink-0" />
+                      <span>Integrity & Ethical Practice</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <CheckCircle className="h-4.5 w-4.5 text-secondary shrink-0" />
+                      <span>Commercial Strategy (&quot;Yukti&quot;)</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <CheckCircle className="h-4.5 w-4.5 text-secondary shrink-0" />
+                      <span>Excellence in Execution</span>
+                    </li>
+                  </ul>
+                </div>
               </SpotlightCard>
             </StaggerItem>
           </StaggerContainer>
@@ -150,14 +156,14 @@ export default function AboutPage() {
           <div className="max-w-4xl mx-auto space-y-16">
             <div className="text-center">
               <span className="text-xs font-bold tracking-widest text-secondary uppercase block mb-3">Our Progress</span>
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900">Firm Milestones</h2>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">Firm Milestones</h2>
             </div>
 
-            <div className="relative border-l border-slate-200 ml-4 md:ml-32 py-4 space-y-12">
+            <div className="relative border-l border-slate-200 dark:border-slate-800 ml-4 md:ml-32 py-4 space-y-12">
               {timelineEvents.map((event, index) => (
                 <ScrollReveal key={index} className="relative pl-8 md:pl-12 group">
                   {/* Timeline bullet */}
-                  <div className="absolute -left-3.5 top-1.5 w-7 h-7 rounded-full bg-white border border-slate-200 flex items-center justify-center group-hover:border-secondary transition-colors duration-300 z-10 shadow-sm">
+                  <div className="absolute -left-3.5 top-1.5 w-7 h-7 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center group-hover:border-secondary transition-colors duration-300 z-10 shadow-sm">
                     <div className="w-2.5 h-2.5 rounded-full bg-secondary group-hover:scale-110 transition-transform" />
                   </div>
 
@@ -166,12 +172,12 @@ export default function AboutPage() {
                     {event.year}
                   </div>
 
-                  <div className="bg-slate-50/50 border border-slate-200/60 p-6 rounded-2xl backdrop-blur-md max-w-xl group-hover:border-slate-300 transition-colors shadow-sm">
-                    <div className="flex items-center gap-2.5 mb-2 text-slate-900 font-bold">
+                  <div className="bg-slate-50/50 dark:bg-slate-950/40 border border-slate-200/60 dark:border-slate-800/50 p-6 rounded-2xl backdrop-blur-md max-w-xl group-hover:border-slate-350 dark:group-hover:border-slate-700 transition-colors shadow-sm">
+                    <div className="flex items-center gap-2.5 mb-2 text-foreground font-bold">
                       {event.icon}
                       <h3 className="text-lg">{event.title}</h3>
                     </div>
-                    <p className="text-slate-500 text-sm leading-relaxed">
+                    <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
                       {event.description}
                     </p>
                   </div>
@@ -184,3 +190,4 @@ export default function AboutPage() {
     </div>
   );
 }
+

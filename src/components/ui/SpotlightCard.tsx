@@ -12,7 +12,7 @@ interface SpotlightCardProps {
 export function SpotlightCard({
   children,
   className = "",
-  glowColor = "rgba(13, 148, 136, 0.05)",
+  glowColor = "var(--border-glow)",
 }: SpotlightCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [coords, setCoords] = useState({ x: 0, y: 0 });
@@ -67,22 +67,22 @@ export function SpotlightCard({
         transformStyle: "preserve-3d",
         perspective: "1000px",
       }}
-      className="relative rounded-2xl p-[1px] transition-all duration-300 hover:shadow-2xl hover:shadow-slate-900/[0.02] h-full w-full"
+      className="relative rounded-2xl p-[1px] transition-all duration-300 hover:shadow-2xl hover:shadow-slate-950/[0.08] dark:hover:shadow-black/30 h-full w-full"
     >
       {/* Outer Mouse-Tracking Border Glow (1px visible edge) */}
       <div
         className="absolute inset-0 rounded-2xl transition-opacity duration-500 pointer-events-none"
         style={{
-          opacity: isFocused ? 1 : 0.35,
+          opacity: isFocused ? 1 : 0.45,
           background: isFocused 
-            ? `radial-gradient(130px circle at ${coords.x}px ${coords.y}px, rgba(13, 148, 136, 0.35), transparent 100%)`
-            : "rgba(13, 148, 136, 0.08)",
+            ? `radial-gradient(130px circle at ${coords.x}px ${coords.y}px, var(--secondary), transparent 100%)`
+            : "var(--border-glow)",
         }}
       />
       
       {/* Inner Card Body (Inherits padding, height, and flex from className) */}
       <div 
-        className={`relative rounded-[15px] bg-white/75 backdrop-blur-xl h-full w-full overflow-hidden ${className}`}
+        className={`relative rounded-[15px] bg-white/75 dark:bg-slate-900/40 backdrop-blur-xl h-full w-full overflow-hidden border border-slate-200/50 dark:border-slate-800/40 ${className}`}
         style={{
           transformStyle: "preserve-3d",
         }}
@@ -104,3 +104,4 @@ export function SpotlightCard({
     </motion.div>
   );
 }
+

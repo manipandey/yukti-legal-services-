@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "name": "Apekshya Chalise",
+    "position": "Advocate & Managing Partner",
+    "experience": "10+ Years",
+    "qualifications": "LL.M.",
+    "specialization": "Corporate Law, FDI",
+    "image_url": "/placeholder-lawyer.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Aakash Dhakal",
+    "position": "Advocate",
+    "experience": "8+ Years",
+    "qualifications": "LL.B., Advocate",
+    "specialization": "Civil Litigation, Property Law",
+    "image_url": "/placeholder-lawyer.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Niru Dahal",
+    "position": "Advocate",
+    "experience": "8+ Years",
+    "qualifications": "LL.B., Advocate",
+    "specialization": "Company Registration, Tax Law",
+    "image_url": "/placeholder-lawyer.jpg"
+  }
+]
